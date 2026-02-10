@@ -48,7 +48,11 @@ This separation ensures modularity, scalability, and ease of deployment.
 
 ---
 
-## <div align="center">Get Started</div>
+## <div align="center">Architecture</div>
+
+---
+
+## <div align="center">Dependencies</div>
 
 ### Prerequisites
 
@@ -59,3 +63,21 @@ This separation ensures modularity, scalability, and ease of deployment.
 - A supported robot or simulation environment (this was only tested with a real ur3e)
 
 ---
+
+## <div align="center">Setup Guide</div>
+text
+
+---
+
+## <div align="center">Running the System</div>
+text
+
+---
+
+## <div align="center">Usage</div>
+text
+
+---
+
+## <div align="center">License</div>
+This repository is released under the MIT License. Please see the [LICENSE](LICENSE) file for more details.
