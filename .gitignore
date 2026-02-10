@@ -1,0 +1,27 @@
+# colcon
+build/
+install/
+log/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# ROS / ament
+*.egg-info/
+*.ament_cmake*
+*.pytest_cache/
+
+# Editor/OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# CMake / misc
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
