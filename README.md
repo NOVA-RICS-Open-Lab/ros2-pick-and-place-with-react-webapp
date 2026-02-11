@@ -124,7 +124,6 @@ The system supports wireless operation through a dedicated access point (AP) con
 
 To run this system, the following environment and hardware are required.
 
----
 
 ## System Requirements
 
@@ -137,8 +136,6 @@ To run this system, the following environment and hardware are required.
 - npm
 
 Internet access is recommended for installing missing dependencies.
-
----
 
 ## ROS 2 Dependencies
 
