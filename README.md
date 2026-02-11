@@ -19,8 +19,8 @@ Lisbon, Portugal
       for intuitive human-robot interaction. It also implements a way to control the robotic cell from a base AP router wirellessly connected to the cell.
       <br><br>
       The system combines a ROS 2 backend (motion planning, execution, and robot control)
-      with a modern frontend that allows users to command and monitor the robot
-      through a browser, enabling rapid prototyping of industrial and educational
+      with an API python server and a modern frontend that allows users to command and monitor the robot
+      through a browser web app, enabling rapid prototyping of industrial and educational
       automation cells.
     </td>
   </tr>
@@ -30,25 +30,24 @@ Lisbon, Portugal
 
 ---
 
-## <div align="center">System Overview</div>
+## <div align="center">Architecture</div>
 
 The architecture is divided into three main layers:
 
 - **ROS 2 Backend**
   - Robot drivers and controllers
   - Pick-and-place logic
-  - Motion planning and execution
-- **API Layer**
-  - HTTP/REST interface bridging ROS 2 and the web frontend
+  - ROS 2 action server
+  - MoveIt2 motion planning and execution
+- **API Python Server Layer**
+  - HTTP interface bridging the web frontend
+  - ROS 2 action client bridging ROS and the API sever
+  - Hard coded board state truth checking and logic
 - **React + Vite Frontend**
   - Browser-based UI for commanding pick-and-place operations
   - Visualization of task state and system feedback
 
 This separation ensures modularity, scalability, and ease of deployment.
-
----
-
-## <div align="center">Architecture</div>
 
 ---
 
