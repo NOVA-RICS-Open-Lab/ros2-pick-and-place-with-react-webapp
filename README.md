@@ -32,7 +32,7 @@ Lisbon, Portugal
 
 ## <div align="center">Architecture</div>
 
-# General
+### General
 
 The architecture is divided into three main layers:
 
