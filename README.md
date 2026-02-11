@@ -16,7 +16,7 @@ Lisbon, Portugal
     <td style="vertical-align: top;">
       This repository presents a complete robotic pick-and-place system based on
       <strong>ROS 2</strong>, integrating a <strong>web-based React interface</strong>
-      for intuitive human-robot interaction.
+      for intuitive human-robot interaction. It also implements a way to control the robotic cell from a base AP router wirellessly connected to the cell.
       <br><br>
       The system combines a ROS 2 backend (motion planning, execution, and robot control)
       with a modern frontend that allows users to command and monitor the robot
