@@ -25,8 +25,7 @@ Lisbon, Portugal
       <br><br>
       The system combines a ROS 2 backend (motion planning, execution, and robot control)
       with an API python server and a modern frontend that allows users to command and monitor the robot
-      through a browser web app, enabling rapid prototyping of industrial and educational
-      automation cells.
+      through a browser web app.
     </td>
   </tr>
 </table>
