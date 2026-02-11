@@ -132,8 +132,6 @@ To run this system, the following environment and hardware are required.
 - `colcon` build tools
 - `rosdep`
 - Python ≥ 3.10
-- Node.js ≥ 22
-- npm
 
 Internet access is recommended for installing missing dependencies.
 
@@ -152,7 +150,7 @@ Make sure all ROS 2 packages are properly sourced before running the system.
 
 ## Web Application Requirements
 
-- Node.js ≥ 20
+- Node.js v22
 - npm
 - Modern web browser (Chrome, Firefox, Edge)
 
