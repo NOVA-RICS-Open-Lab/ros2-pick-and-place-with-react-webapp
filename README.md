@@ -30,37 +30,103 @@ Lisbon, Portugal
 
 ---
 
-## <div align="center">Architecture</div>
+# <div align="center">Architecture</div>
 
-### General
+## System Overview
 
-The architecture is divided into three main layers:
+The system follows a modular layered architecture separating robot control, API communication, and user interaction.
 
-- **ROS 2 Backend**
-  - Robot drivers and controllers
-  - Pick-and-place logic
-  - ROS 2 action server
-  - MoveIt2 motion planning and execution
-- **API Python Server Layer**
-  - HTTP interface bridging the web frontend
-  - ROS 2 action client bridging ROS and the API sever
-  - Hard coded board state truth checking and logic
-- **React + Vite Frontend**
-  - Browser-based UI for commanding pick-and-place operations
-  - Visualization of task state and system feedback
+It is composed of three main layers:
 
-This separation ensures modularity, scalability, and ease of deployment.
+- **ROS 2 Backend (C++)**
+- **Python API Server**
+- **React + Vite Web Interface**
+
+This separation ensures safety, scalability, and clean responsibility boundaries.
 
 ---
 
-## <div align="center">Dependencies</div>
+## ROS 2 Backend
 
-### Prerequisites
+The backend is responsible for all robot-level operations.
+
+It integrates:
+
+- `ur_robot_driver`
+- `MoveIt 2`
+- A custom ROS 2 action server (`move_piece`)
+- IO control for the suction gripper
+
+The `move_piece` action handles the full pick-and-place sequence:
+
+1. Approach source  
+2. Descend and pick  
+3. Lift  
+4. Transit  
+5. Place  
+6. Retreat  
+
+Motion is executed using Cartesian planning (`computeCartesianPath`) with velocity scaling and collision checking enabled.
+
+A dedicated calibration node initializes the robot to a known joint configuration before operation.
+
+
+
+## Python API Server
+
+The Python server acts as a bridge between the web interface and ROS 2.
+
+It:
+
+- Exposes HTTP endpoints  
+- Sends goals to the ROS 2 action server through a spinning client node
+- Receives feedback and results  
+- Maintains logical board state validation  
+
+This layer isolates web interaction from direct robot control.
+
+
+
+## React + Vite Frontend
+
+The frontend provides a browser-based interface for:
+
+- Selecting source and destination slots with a drag and drop style
+- Setting execution speed  
+- Triggering pick-and-place operations  
+- Monitoring execution progress  
+
+It communicates with the backend via HTTP.
+
+
+
+## Communication Flow
+```
+Browser React webApp
+      |
+      |  HTTP
+      ↓
+Python API Server
+      |
+      | ROS 2 Action
+      ↓ 
+C++ Action Server
+      |
+      | MoveIt 2
+      ↓ 
+UR Robot + Gripper
+```
+The system supports wireless operation through a dedicated access point (AP) connecting the operator device to the robotic cell network through Wifi.
+
+---
+
+# <div align="center">Prerequisites</div>
+
+To build this sytem you should have **at least** the following:
 
 - Ubuntu 22.04
 - ROS 2 Humble
-- Node.js ≥ 20
-- `colcon`, `rosdep`
+- Node.js ≥ 22
 - A supported robot or simulation environment (this was only tested with a real ur3e)
 
 ---
