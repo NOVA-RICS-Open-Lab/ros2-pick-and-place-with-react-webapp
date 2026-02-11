@@ -3,9 +3,14 @@
 # ROS 2 Pick-and-Place with React Web App
 
 [![ROS 2 Humble](https://img.shields.io/badge/ROS2-Humble-blue)](https://docs.ros.org/en/humble/)
-[![Frontend: React](https://img.shields.io/badge/Frontend-React-blue)](https://react.dev/)
-[![Build: Vite](https://img.shields.io/badge/Build-Vite-purple)](https://vitejs.dev/)
+[![UR3e](https://img.shields.io/badge/Platform-UR3e-orange)](https://www.universal-robots.com/)
+[![MoveIt 2](https://img.shields.io/badge/MoveIt-2-green)](https://moveit.ros.org/)
+[![Python](https://img.shields.io/badge/API-Python-yellow)](https://www.python.org/)
+[![React](https://img.shields.io/badge/Frontend-React-61DAFB)](https://react.dev/)
+[![Vite](https://img.shields.io/badge/Build-Vite-646CFF)](https://vitejs.dev/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-red.svg)](https://opensource.org/licenses/MIT)
+
+
 
 **NOVA RICS Open Lab**  
 NOVA School of Science and Technology (FCT NOVA)  
