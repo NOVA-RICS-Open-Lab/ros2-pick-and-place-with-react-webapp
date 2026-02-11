@@ -122,12 +122,57 @@ The system supports wireless operation through a dedicated access point (AP) con
 
 # <div align="center">Prerequisites</div>
 
-To build this sytem you should have **at least** the following:
+To run this system, the following environment and hardware are required.
 
-- Ubuntu 22.04
-- ROS 2 Humble
+---
+
+## System Requirements
+
+- **Ubuntu 22.04 LTS**
+- **ROS 2 Humble**
+- `colcon` build tools
+- `rosdep`
+- Python ≥ 3.10
 - Node.js ≥ 22
-- A supported robot or simulation environment (this was only tested with a real ur3e)
+- npm
+
+Internet access is recommended for installing missing dependencies.
+
+---
+
+## ROS 2 Dependencies
+
+- `MoveIt 2`
+- `ur_robot_driver`
+- `ur_calibration`
+- `ur_moveit_config`
+- `ur_controllers`
+- `ur_description`
+- `External Control URCaps` installed on the UR robot
+
+Make sure all ROS 2 packages are properly sourced before running the system.
+
+
+## Web Application Requirements
+
+- Node.js ≥ 20
+- npm
+- Modern web browser (Chrome, Firefox, Edge)
+
+
+## Hardware Requirements
+
+- Universal Robots **UR3e** (tested platform)
+- Compatible gripper (suction-based in this implementation)
+- At least one router or access point (AP) for local wireless communication
+- Operator device (PC or laptop connected to the same local network)
+
+
+## Optional
+
+- Simulation environment (Gazebo / RViz) for testing without hardware
+
+*Simulating the robot will not be taken into account here but you can refer to the UR teams ROS 2 documentation to do it yourself.*
 
 ---
 
