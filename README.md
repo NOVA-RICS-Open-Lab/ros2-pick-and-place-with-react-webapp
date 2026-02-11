@@ -32,6 +32,8 @@ Lisbon, Portugal
 
 ## <div align="center">Architecture</div>
 
+# General
+
 The architecture is divided into three main layers:
 
 - **ROS 2 Backend**
